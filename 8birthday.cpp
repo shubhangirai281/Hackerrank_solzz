@@ -1,14 +1,37 @@
 #include <bits/stdc++.h>
-typedef long long LL;
+
 using namespace std;
 
-int main(){
-	LL s[5];
-	LL d = 0;
-	for(int i = 0; i < 5; i++){
-		cin >> s[i];
-		d += s[i];
-	}
-	sort(s,s+5);
-	cout << d-s[4] << " " << d-s[0] << endl;
+
+int main()
+{
+   
+    int  N;
+    cin>>N;
+    int ar[N];
+    int max = ar[0], count = 0;
+    
+    for(int i=0;i<N;i++)
+    {
+        cin>>ar[i];
+    }
+    for(int i=0;i<N;i++)
+    {
+        if(ar[i] > max)
+            {
+                max  = ar[i];
+            }
+    }
+
+    for(int i=0;i<N ;i++)
+    {
+        if(ar[i] == max)
+        count++;
+    }
+
+    cout<< count;
+
+
+
+    return 0;
 }
